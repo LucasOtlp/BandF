@@ -9,6 +9,7 @@ import UIKit
 
 class AccueilViewController: UIViewController {
 
+    @IBOutlet weak var Video_pres: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
