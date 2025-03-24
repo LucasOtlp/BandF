@@ -29,7 +29,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="logo breath &amp; focus" translatesAutoresizingMaskIntoConstraints="NO" id="i8g-TB-ETE">
-                                <rect key="frame" x="16" y="38" width="186" height="152"/>
+                                <rect key="frame" x="0.0" y="22" width="174" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -37,14 +37,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Accueil" selectedImage="pencil" catalog="system" id="Phe-tr-UHW"/>
+                    <tabBarItem key="tabBarItem" title="Accueil" image="homekit" catalog="system" id="Phe-tr-UHW"/>
                     <connections>
                         <outlet property="Video_pres" destination="oFB-Xh-47S" id="6Yq-vX-JBd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-911" y="-231"/>
+            <point key="canvasLocation" x="-912.2137404580152" y="-231.69014084507043"/>
         </scene>
         <!--Travail-->
         <scene sceneID="5d9-U6-W0V">
@@ -56,7 +56,7 @@
                         <viewLayoutGuide key="safeArea" id="WY9-k4-yLA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Travail" selectedImage="pencil.slash" catalog="system" id="Xhb-Vm-eYC"/>
+                    <tabBarItem key="tabBarItem" title="Travail" image="square.and.arrow.up" catalog="system" id="Xhb-Vm-eYC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQW-y7-1Op" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,7 +72,7 @@
                         <viewLayoutGuide key="safeArea" id="P2o-gE-89l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Detente" selectedImage="eraser" catalog="system" id="FsB-In-wuV"/>
+                    <tabBarItem key="tabBarItem" title="Detente" image="square.and.pencil.circle" catalog="system" id="FsB-In-wuV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEz-1y-Yl7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,7 +137,7 @@
                         <viewLayoutGuide key="safeArea" id="kNJ-I3-i6C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Paramètres" selectedImage="graduationcap.fill" catalog="system" id="Ggz-pn-P23"/>
+                    <tabBarItem key="tabBarItem" title="Paramètres" image="gearshape" catalog="system" id="Ggz-pn-P23"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x53-h1-2qU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,11 +165,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="eraser" catalog="system" width="128" height="119"/>
-        <image name="graduationcap.fill" catalog="system" width="128" height="108"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="logo breath &amp; focus" width="500" height="500"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="pencil.slash" catalog="system" width="128" height="120"/>
+        <image name="square.and.arrow.up" catalog="system" width="110" height="128"/>
+        <image name="square.and.pencil.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
