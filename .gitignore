@@ -1,0 +1,6 @@
+# Fichiers générés par Xcode
+DerivedData/
+*.xcuserstate
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/
+.DS_Store
