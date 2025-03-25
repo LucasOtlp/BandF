@@ -130,9 +130,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Detente" image="square.and.arrow.up" catalog="system" id="FsB-In-wuV"/>
-                    <connections>
-                        <outlet property="Titre" destination="cXU-I4-uHI" id="K4y-bL-h9r"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEz-1y-Yl7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

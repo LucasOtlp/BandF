@@ -10,8 +10,6 @@ import UIKit
 class AccueilPageDetenteViewController: UIViewController {
 
     
-    @IBOutlet weak var Titre: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
