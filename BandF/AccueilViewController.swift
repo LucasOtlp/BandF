@@ -6,25 +6,35 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class AccueilViewController: UIViewController {
 
     @IBOutlet weak var Video_pres: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        playVideo()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func playVideo() {
+        guard let path = Bundle.main.path(forResource: "198790-9088575412", ofType: "mov") else {
+            print("Vidéo non trouvée")
+            return
+        }
+        
+        let url = URL(fileURLWithPath: path)
+        let player = AVPlayer(url: url)
+        let playerLayer = AVPlayerLayer(player: player)
+        
+        playerLayer.frame = Video_pres.bounds
+        playerLayer.videoGravity = .resizeAspectFill
+        
+        Video_pres.layer.addSublayer(playerLayer)
+        
+        player.play()
     }
-    */
-
+    
 }
