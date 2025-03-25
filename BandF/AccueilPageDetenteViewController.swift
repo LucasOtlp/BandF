@@ -9,13 +9,15 @@ import UIKit
 
 class AccueilPageDetenteViewController: UIViewController {
 
+    
+    @IBOutlet weak var Titre: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
     /*
     // MARK: - Navigation
 
