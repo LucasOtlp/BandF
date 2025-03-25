@@ -6,35 +6,24 @@
 //
 
 import UIKit
-import AVKit
-import AVFoundation
+import WebKit
 
 class AccueilViewController: UIViewController {
-
-    @IBOutlet weak var Video_pres: UIView!
+    
+    @IBOutlet weak var Video_pres: UIView! // UIView où afficher la vidéo
+    var webView: WKWebView! // Déclaration de WebView
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        playVideo()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    func playVideo() {
-        guard let path = Bundle.main.path(forResource: "198790-9088575412", ofType: "mov") else {
-            print("Vidéo non trouvée")
-            return
+        
+        // Initialiser WebView dans Video_pres
+        webView = WKWebView(frame: Video_pres.bounds)
+        Video_pres.addSubview(webView) // Ajouter WebView dans Video_pres
+        
+        // Charger la vidéo YouTube
+        if let url = URL(string: "https://www.youtube.com/embed/dQw4w9WgXcQ") {
+            let request = URLRequest(url: url)
+            webView.load(request)
         }
-        
-        let url = URL(fileURLWithPath: path)
-        let player = AVPlayer(url: url)
-        let playerLayer = AVPlayerLayer(player: player)
-        
-        playerLayer.frame = Video_pres.bounds
-        playerLayer.videoGravity = .resizeAspectFill
-        
-        Video_pres.layer.addSublayer(playerLayer)
-        
-        player.play()
     }
-    
 }
