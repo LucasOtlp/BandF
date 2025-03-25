@@ -72,7 +72,7 @@
                         <viewLayoutGuide key="safeArea" id="P2o-gE-89l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Detente" image="square.and.pencil.circle" catalog="system" id="FsB-In-wuV"/>
+                    <tabBarItem key="tabBarItem" title="Detente" image="square.and.arrow.up" catalog="system" id="FsB-In-wuV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEz-1y-Yl7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,9 +167,8 @@
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
-        <image name="logo breath &amp; focus" width="500" height="500"/>
+        <image name="logo breath &amp; focus" width="112.5" height="112.5"/>
         <image name="square.and.arrow.up" catalog="system" width="110" height="128"/>
-        <image name="square.and.pencil.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
