@@ -1,29 +1,37 @@
-//
-//  AccueilViewController.swift
-//  BandF
-//
-//  Created by etudiant on 10/03/2025.
-//
-
 import UIKit
 import WebKit
 
 class AccueilViewController: UIViewController {
-    
-    @IBOutlet weak var Video_pres: UIView! // UIView où afficher la vidéo
-    var webView: WKWebView! // Déclaration de WebView
-    
+
+    @IBOutlet weak var Video_pres: UIView! // Vue contenant la vidéo
+    var webView: WKWebView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Initialiser WebView dans Video_pres
-        webView = WKWebView(frame: Video_pres.bounds)
-        Video_pres.addSubview(webView) // Ajouter WebView dans Video_pres
-        
-        // Charger la vidéo YouTube
-        if let url = URL(string: "https://www.youtube.com/embed/dQw4w9WgXcQ") {
-            let request = URLRequest(url: url)
-            webView.load(request)
-        }
+        // Création de la WebView
+        webView = WKWebView(frame: .zero)
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        Video_pres.addSubview(webView)
+
+        // Ajout de contraintes pour que la WebView remplisse Video_pres
+        NSLayoutConstraint.activate([
+            webView.topAnchor.constraint(equalTo: Video_pres.topAnchor),
+            webView.bottomAnchor.constraint(equalTo: Video_pres.bottomAnchor),
+            webView.leadingAnchor.constraint(equalTo: Video_pres.leadingAnchor),
+            webView.trailingAnchor.constraint(equalTo: Video_pres.trailingAnchor)
+        ])
+
+        // Charger la vidéo avec HTML pour qu'elle s'affiche correctement
+        let videoID = "KLImqL0kZeU" // Remplace par l’ID de ta vidéo YouTube
+        let html = """
+        <!DOCTYPE html>
+        <html>
+        <body style="margin:0;padding:0;overflow:hidden;">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/\(videoID)?playsinline=1" frameborder="0" allowfullscreen></iframe>
+        </body>
+        </html>
+        """
+        webView.loadHTMLString(html, baseURL: nil)
     }
 }
