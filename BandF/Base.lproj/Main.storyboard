@@ -169,16 +169,6 @@
                                     <action selector="tapSurPause:" destination="ByW-Uz-eBK" eventType="touchUpInside" id="zBM-9c-C9U"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="xlu-90-IWU">
-                                <rect key="frame" x="4" y="522" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="minimumTrackTintColor" systemColor="systemCyanColor"/>
-                                <color key="maximumTrackTintColor" systemColor="opaqueSeparatorColor"/>
-                                <color key="thumbTintColor" systemColor="labelColor"/>
-                                <connections>
-                                    <action selector="ChangementSurSlider:" destination="ByW-Uz-eBK" eventType="valueChanged" id="lb7-6k-Bjk"/>
-                                </connections>
-                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaF-UA-jt9">
                                 <rect key="frame" x="117" y="544" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -189,12 +179,27 @@
                                     <action selector="tapSurRevoir:" destination="ByW-Uz-eBK" eventType="touchUpInside" id="MKn-bc-itN"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="xlu-90-IWU">
+                                <rect key="frame" x="4" y="522" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" systemColor="systemCyanColor"/>
+                                <color key="maximumTrackTintColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="thumbTintColor" systemColor="labelColor"/>
+                                <connections>
+                                    <action selector="ChangementSurSlider:" destination="ByW-Uz-eBK" eventType="valueChanged" id="lb7-6k-Bjk"/>
+                                </connections>
+                            </slider>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="theo" translatesAutoresizingMaskIntoConstraints="NO" id="K10-Rb-ejA">
+                                <rect key="frame" x="187" y="568" width="240" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P2o-gE-89l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Detente" image="square.and.arrow.up" catalog="system" id="FsB-In-wuV"/>
                     <connections>
+                        <outlet property="theoImageView" destination="K10-Rb-ejA" id="vRs-UH-ncz"/>
                         <outlet property="videoSlider" destination="xlu-90-IWU" id="MWs-OJ-uUE"/>
                         <outlet property="videoView" destination="fBj-Dc-7kj" id="oEa-dq-seX"/>
                     </connections>
@@ -313,6 +318,7 @@
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="logo breath &amp; focus" width="500" height="500"/>
         <image name="square.and.arrow.up" catalog="system" width="110" height="128"/>
+        <image name="theo" width="894" height="1250"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

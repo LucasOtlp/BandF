@@ -14,6 +14,8 @@ class AccueilPageDetenteViewController: UIViewController {
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoSlider: UISlider!
     
+    @IBOutlet weak var theoImageView: UIImageView!
+    
     var player: AVPlayer?
 
     override func viewDidLoad() {
@@ -60,6 +62,15 @@ class AccueilPageDetenteViewController: UIViewController {
             let currentSeconds = CMTimeGetSeconds(time)
             self?.videoSlider.value = Float(currentSeconds)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // Animation de disparition de l'image
+        UIView.animate(withDuration: 2.0, animations: {
+            self.theoImageView.alpha = 0.0  // Rendre l'image complètement transparente
+        })
     }
     
     func showVideo() {
