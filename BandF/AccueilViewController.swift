@@ -13,8 +13,7 @@ class AccueilViewController: UIViewController {
     
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoSlider: UISlider!
-    
-    @IBOutlet weak var theoImageView: UIImageView!
+  
     
     var player: AVPlayer?
 
@@ -64,14 +63,6 @@ class AccueilViewController: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        // Animation de disparition de l'image
-        UIView.animate(withDuration: 2.0, animations: {
-            self.theoImageView.alpha = 0.0  // Rendre l'image complètement transparente
-        })
-    }
     
     func showVideo() {
         if let path = Bundle.main.path(forResource: "fortbattlepass", ofType: "mp4") {
