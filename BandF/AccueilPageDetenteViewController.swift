@@ -48,6 +48,17 @@ class AccueilPageDetenteViewController: UIViewController {
     }
     
     
+    
+    @IBAction func tapSurAnki(_ sender: Any) {
+        if let url = URL(string: "https://apps.ankiweb.net") {
+                UIApplication.shared.open(url)
+            }
+    }
+    
+    
+    
+    
+    
     func addPeriodicTimeObserver() {
         guard let player = player else { return }
         // ✅ Attendre que l’item soit prêt avant de lire la durée
@@ -63,6 +74,7 @@ class AccueilPageDetenteViewController: UIViewController {
             self?.videoSlider.value = Float(currentSeconds)
         }
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
