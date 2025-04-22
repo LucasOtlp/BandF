@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "plan-maison-traditionnelle-plain-pied-92m-3-chambres-et-garage-n94-rez-de-chaussee-24bd33a-1200x1055.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
