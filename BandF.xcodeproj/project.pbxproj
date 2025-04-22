@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		ECCDCE052DA504F500A3EA5E /* PodcastsDetenteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCDCE042DA504F500A3EA5E /* PodcastsDetenteViewController.swift */; };
+		ECCDCE072DA5052C00A3EA5E /* ExercicesRespirationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCDCE062DA5052C00A3EA5E /* ExercicesRespirationViewController.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EC642A612D7ECCEC00AC6B46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		EC642A4A2D7ECCEB00AC6B46 /* BandF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BandF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC642A602D7ECCEC00AC6B46 /* BandFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BandFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC642A6A2D7ECCEC00AC6B46 /* BandFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BandFUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCDCE042DA504F500A3EA5E /* PodcastsDetenteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsDetenteViewController.swift; sourceTree = "<group>"; };
+		ECCDCE062DA5052C00A3EA5E /* ExercicesRespirationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicesRespirationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -88,6 +95,8 @@
 		EC642A412D7ECCEB00AC6B46 = {
 			isa = PBXGroup;
 			children = (
+				ECCDCE062DA5052C00A3EA5E /* ExercicesRespirationViewController.swift */,
+				ECCDCE042DA504F500A3EA5E /* PodcastsDetenteViewController.swift */,
 				EC642A4C2D7ECCEB00AC6B46 /* BandF */,
 				EC642A632D7ECCEC00AC6B46 /* BandFTests */,
 				EC642A6D2D7ECCEC00AC6B46 /* BandFUITests */,
@@ -249,6 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECCDCE072DA5052C00A3EA5E /* ExercicesRespirationViewController.swift in Sources */,
+				ECCDCE052DA504F500A3EA5E /* PodcastsDetenteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
