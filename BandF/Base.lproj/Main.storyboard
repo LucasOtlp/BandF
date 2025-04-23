@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wCw-5O-aMf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wCw-5O-aMf">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Item-->
+        <scene sceneID="zlm-iW-chZ">
+            <objects>
+                <navigationController id="zgo-V7-P32" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="pencil" catalog="system" id="2NZ-6s-bMP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jkN-Rj-3WE">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ByW-Uz-eBK" kind="relationship" relationship="rootViewController" id="JS8-8S-QrZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TGp-mB-BSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24" y="-154"/>
+        </scene>
         <!--Accueil-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -314,7 +331,8 @@
                         <viewLayoutGuide key="safeArea" id="P2o-gE-89l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Detente" image="square.and.arrow.up" catalog="system" id="FsB-In-wuV"/>
+                    <tabBarItem key="tabBarItem" title="Detente" image="pencil" catalog="system" id="FsB-In-wuV"/>
+                    <navigationItem key="navigationItem" id="F6p-5m-2WH"/>
                     <connections>
                         <outlet property="theoImageView" destination="K10-Rb-ejA" id="vRs-UH-ncz"/>
                         <outlet property="videoSlider" destination="xlu-90-IWU" id="MWs-OJ-uUE"/>
@@ -323,14 +341,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEz-1y-Yl7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-95.419847328244273" y="-84.507042253521135"/>
+            <point key="canvasLocation" x="-819" y="575"/>
         </scene>
         <!--Podcasts Detente View Controller-->
         <scene sceneID="7M5-gL-Nis">
             <objects>
                 <viewController id="kRY-RW-zJY" customClass="PodcastsDetenteViewController" customModule="BandF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KsS-0N-SOY">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="videos/podcasts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ana-wY-EFN">
@@ -348,14 +366,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="283-c0-Z1P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1320" y="695"/>
+            <point key="canvasLocation" x="-1369" y="1280"/>
         </scene>
         <!--Exercices Respiration View Controller-->
         <scene sceneID="SXa-hc-QhN">
             <objects>
                 <viewController id="eUv-Op-1Nd" customClass="ExercicesRespirationViewController" customModule="BandF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hXr-nE-jK1">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="exos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trl-Ny-Ekz">
@@ -373,14 +391,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqV-MT-gFG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-297" y="695"/>
+            <point key="canvasLocation" x="-347" y="1280"/>
         </scene>
         <!--Pomodoro View Controller-->
         <scene sceneID="nQn-hc-iVr">
             <objects>
                 <viewController id="3r6-Ml-U3y" customClass="PomodoroViewController" customModule="BandF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KmO-be-2EL">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S6q-xk-9WF">
@@ -477,7 +495,7 @@
             <objects>
                 <viewController id="p37-W2-5jl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oBh-EC-okZ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3l-i4-WBD">
@@ -540,7 +558,7 @@
             <objects>
                 <viewController id="3NK-gu-sf4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1bI-mq-6So">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYd-AI-icq">
@@ -694,7 +712,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="XpZ-jU-sat"/>
-                        <segue destination="ByW-Uz-eBK" kind="relationship" relationship="viewControllers" id="fOw-Se-ml9"/>
+                        <segue destination="zgo-V7-P32" kind="relationship" relationship="viewControllers" id="s8B-h9-o7n"/>
                         <segue destination="w9p-3r-dZN" kind="relationship" relationship="viewControllers" id="ChT-KO-HTY"/>
                         <segue destination="4Et-xD-kvG" kind="relationship" relationship="viewControllers" id="u43-fT-Lyx"/>
                     </connections>
@@ -709,6 +727,7 @@
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="image-personne-ecriture-particulier-tarif" width="659" height="853"/>
         <image name="logo breath &amp; focus" width="500" height="500"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plan-maison-traditionnelle-plain-pied-92m-3-chambres-et-garage-n94-rez-de-chaussee-24bd33a-1200x1055" width="791" height="692"/>
         <image name="square.and.arrow.up" catalog="system" width="110" height="128"/>
         <image name="theo" width="894" height="1250"/>
