@@ -1,13 +1,13 @@
 //
-//  ParamètreViewController.swift
+//  ParametresViewController.swift
 //  BandF
 //
-//  Created by etudiant on 24/03/2025.
+//  Created by etudiant on 24/04/2025.
 //
 
 import UIKit
 
-class Parame_treViewController: UIViewController {
+class ParametresViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
