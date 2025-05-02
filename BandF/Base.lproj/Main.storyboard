@@ -300,31 +300,22 @@
                                 <rect key="frame" x="187" y="568" width="240" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCn-nL-7eG">
-                                <rect key="frame" x="44" y="602" width="58" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Anki"/>
-                                <connections>
-                                    <action selector="tapSurAnki:" destination="ByW-Uz-eBK" eventType="touchUpInside" id="Cda-SQ-exa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unQ-dL-G7H">
-                                <rect key="frame" x="20" y="700" width="304" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Accéder aux exercices de respiration"/>
-                                <connections>
-                                    <segue destination="eUv-Op-1Nd" kind="show" id="4AH-Wv-097"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eb-Ww-GEg">
-                                <rect key="frame" x="22" y="657" width="240" height="35"/>
+                                <rect key="frame" x="22" y="602" width="240" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Accéder aux vidéos/podcats"/>
                                 <connections>
                                     <segue destination="kRY-RW-zJY" kind="show" identifier="LienVideosDetente" id="A5l-ok-kY9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unQ-dL-G7H">
+                                <rect key="frame" x="16" y="675" width="304" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Accéder aux exercices de respiration"/>
+                                <connections>
+                                    <segue destination="eUv-Op-1Nd" kind="show" id="4AH-Wv-097"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -447,30 +438,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="labTravail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APj-sg-ai3">
-                                <rect key="frame" x="136" y="437" width="118" height="36"/>
+                                <rect key="frame" x="136" y="507" width="118" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="labPause" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knz-ld-GDb">
-                                <rect key="frame" x="136" y="616" width="118" height="36"/>
+                                <rect key="frame" x="136" y="650" width="118" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgZ-wx-ePR">
-                                <rect key="frame" x="112" y="355" width="167" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Démarrer le Travail"/>
-                                <connections>
-                                    <action selector="startTravailTimer:" destination="3r6-Ml-U3y" eventType="touchUpInside" id="ZdY-hZ-iOC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ir1-E5-eM9">
-                                <rect key="frame" x="114" y="529" width="164" height="35"/>
+                                <rect key="frame" x="115" y="586" width="164" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Démarrer la Pause"/>
@@ -485,6 +467,15 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Réinitialiser"/>
                                 <connections>
                                     <action selector="tapSurReset:" destination="3r6-Ml-U3y" eventType="touchUpInside" id="dko-ro-JKu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgZ-wx-ePR">
+                                <rect key="frame" x="115" y="443" width="167" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Démarrer le Travail"/>
+                                <connections>
+                                    <action selector="startTravailTimer:" destination="3r6-Ml-U3y" eventType="touchUpInside" id="ZdY-hZ-iOC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -615,7 +606,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image-personne-ecriture-particulier-tarif" translatesAutoresizingMaskIntoConstraints="NO" id="baX-fW-ARD">
-                                <rect key="frame" x="38" y="414" width="319" height="338"/>
+                                <rect key="frame" x="137" y="494" width="220" height="258"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>

@@ -31,33 +31,18 @@ class AccueilPageDetenteViewController: UIViewController {
         player?.seek(to: targetTime)
     }
     
-    
     @IBAction func tapSurPlay(_ sender: Any) {
         player?.play()
     }
-    
     
     @IBAction func tapSurPause(_ sender: Any) {
         player?.pause()
     }
     
-    
     @IBAction func tapSurRevoir(_ sender: Any) {
         player?.seek(to: .zero)
         player?.play()
     }
-    
-    
-    
-    @IBAction func tapSurAnki(_ sender: Any) {
-        if let url = URL(string: "https://apps.ankiweb.net") {
-                UIApplication.shared.open(url)
-            }
-    }
-    
-    
-    
-    
     
     func addPeriodicTimeObserver() {
         guard let player = player else { return }
