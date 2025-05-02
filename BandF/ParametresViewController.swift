@@ -9,13 +9,19 @@ import UIKit
 
 class ParametresViewController: UIViewController {
 
+    @IBOutlet weak var visuTaille: UILabel!
+    @IBOutlet weak var taille: UIStepper!
+    @IBOutlet weak var langue: UISegmentedControl!
+    @IBOutlet weak var mode: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func tapSurModif(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

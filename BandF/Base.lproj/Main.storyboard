@@ -724,6 +724,7 @@
                         <outlet property="langue" destination="M1o-En-trj" id="nWz-kD-Gbb"/>
                         <outlet property="mode" destination="yap-XM-k0d" id="kRb-YI-odV"/>
                         <outlet property="taille" destination="Jjd-xy-gjE" id="tzG-5x-A2E"/>
+                        <outlet property="visuTaille" destination="BVa-iz-0OU" id="7CT-ur-mDd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x53-h1-2qU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
