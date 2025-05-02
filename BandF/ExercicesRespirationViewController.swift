@@ -19,8 +19,7 @@ class ExercicesRespirationViewController: UIViewController {
     @IBOutlet weak var DureeExpiLabel: UILabel!
     
     @IBOutlet weak var BoutonButton: UIButton!
-    
-    let duration: TimeInterval = 4.0
+
     var inspire = true
     var tempInspi : Int = 1
     var tempExpi : Int = 1
@@ -57,13 +56,13 @@ class ExercicesRespirationViewController: UIViewController {
     
     
     @IBAction func tapSurReglerInspiStepper(_ sender: Any) {
-        dureeInspiLabel.text = String(reglerDureeInspi.value)
+        dureeInspiLabel.text = String(reglerDureeInspi.value) + " s"
         tempInspi = Int(reglerDureeInspi.value)
     }
     
     
     @IBAction func tepSurReglerExpiStepper(_ sender: Any) {
-        DureeExpiLabel.text = String(reglerDureeExpi.value)
+        DureeExpiLabel.text = String(reglerDureeExpi.value) + " s"
         tempExpi = Int(reglerDureeExpi.value)
     }
     
@@ -71,7 +70,9 @@ class ExercicesRespirationViewController: UIViewController {
     func animationRespiration() {
         guard respirationEnCours else { return }
         
-        UIView.animate(withDuration: duration, delay: 0, options: [.allowUserInteraction, .curveEaseInOut], animations: {
+        let duree : TimeInterval = inspire ? TimeInterval(tempInspi) : TimeInterval(tempExpi)
+        
+        UIView.animate(withDuration: duree, delay: 0, options: [.allowUserInteraction, .curveEaseInOut], animations: {
             if self.inspire {
                 self.CercleUIView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
                 self.respirationLabel.text = "Inspire"
