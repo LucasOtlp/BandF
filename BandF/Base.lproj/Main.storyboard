@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGp-mB-BSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24" y="-154"/>
+            <point key="canvasLocation" x="-195" y="-142"/>
         </scene>
         <!--Accueil-->
         <scene sceneID="tne-QT-ifu">
@@ -117,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-912.2137404580152" y="-231.69014084507043"/>
+            <point key="canvasLocation" x="-992" y="-232"/>
         </scene>
         <!--Travail-->
         <scene sceneID="5d9-U6-W0V">
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQW-y7-1Op" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951.90839694656484" y="-85.211267605633807"/>
+            <point key="canvasLocation" x="897" y="-142"/>
         </scene>
         <!--Detente-->
         <scene sceneID="fja-qu-lVe">
@@ -332,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEz-1y-Yl7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-819" y="575"/>
+            <point key="canvasLocation" x="-850" y="637"/>
         </scene>
         <!--Podcasts Detente View Controller-->
         <scene sceneID="7M5-gL-Nis">
@@ -357,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="283-c0-Z1P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1369" y="1280"/>
+            <point key="canvasLocation" x="-1280" y="1372"/>
         </scene>
         <!--Exercices Respiration View Controller-->
         <scene sceneID="SXa-hc-QhN">
@@ -368,18 +368,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QHC-9M-JZA">
-                                <rect key="frame" x="52" y="336" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="96" y="184" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIa-De-Jfw">
-                                <rect key="frame" x="150" y="665" width="115" height="35"/>
+                                <rect key="frame" x="139" y="601" width="115" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="commencer"/>
+                                <connections>
+                                    <action selector="tapSurCommencer:" destination="eUv-Op-1Nd" eventType="touchUpInside" id="Aec-AF-x9I"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="respirer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trl-Ny-Ekz">
-                                <rect key="frame" x="178" y="570" width="59" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="prêt ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trl-Ny-Ekz">
+                                <rect key="frame" x="155" y="498" width="82" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="durée d'inpiration :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwJ-ka-Y0G">
+                                <rect key="frame" x="16" y="676" width="143" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="durée d'expiration :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqT-tA-NXr">
+                                <rect key="frame" x="14" y="714" width="147" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="tU3-V6-8ag">
+                                <rect key="frame" x="261" y="670" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="W3Z-J4-OtO">
+                                <rect key="frame" x="261" y="710" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jum-Th-i8x">
+                                <rect key="frame" x="185" y="681" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -387,13 +419,17 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7x5-ND-dF6"/>
-                        <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                        <color key="backgroundColor" red="0.40034558805068698" green="0.72893632756141113" blue="0.76871567964553833" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="ETH-GN-HRF"/>
+                    <connections>
+                        <outlet property="CercleUIView" destination="QHC-9M-JZA" id="9xT-FC-4n5"/>
+                        <outlet property="respirationLabel" destination="trl-Ny-Ekz" id="13S-Iu-who"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqV-MT-gFG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-347.32824427480915" y="1279.5774647887324"/>
+            <point key="canvasLocation" x="-378" y="1372"/>
         </scene>
         <!--Pomodoro View Controller-->
         <scene sceneID="nQn-hc-iVr">
@@ -490,7 +526,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aN8-5E-TEF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="571.75572519083971" y="636.61971830985919"/>
+            <point key="canvasLocation" x="250" y="637"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YwF-08-XqH">
@@ -553,7 +589,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acw-bo-3ml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1382.4427480916031" y="637.32394366197184"/>
+            <point key="canvasLocation" x="1071" y="637"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iKT-lA-n7A">
@@ -617,7 +653,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VCK-GQ-U6Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2197.709923664122" y="636.61971830985919"/>
+            <point key="canvasLocation" x="1940" y="637"/>
         </scene>
         <!--Paramètres-->
         <scene sceneID="Xsc-rm-CbN">
@@ -720,7 +756,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x53-h1-2qU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1829.7709923664122" y="-232.3943661971831"/>
+            <point key="canvasLocation" x="1804" y="-232"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2IE-cF-YJH">
@@ -766,9 +802,6 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
