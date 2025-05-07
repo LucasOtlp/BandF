@@ -10,8 +10,34 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    private static var tailleText : Int = 17
+    private static var langue : Int = 0
+    private static var mode : Int = 0
 
-
+    public static func getTailleText() -> Int {
+        return tailleText
+    }
+    
+    public static func getLangue() -> Int {
+        return langue
+    }
+    
+    public static func getMode() -> Int {
+        return mode
+    }
+    
+    public static func setTailleText(_ t : Int) {
+        tailleText = t
+    }
+    
+    public static func setLangue(_ l : Int) {
+        langue = l
+    }
+    
+    public static func setMode(_ m : Int) {
+        mode = m
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
