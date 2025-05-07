@@ -71,7 +71,7 @@ class AccueilPageDetenteViewController: UIViewController {
     }
     
     func showVideo() {
-        if let path = Bundle.main.path(forResource: "test", ofType: "mov") {
+        if let path = Bundle.main.path(forResource: "Detente", ofType: "mov") {
             let url = URL(fileURLWithPath: path)
             player = AVPlayer(url: url)
             
