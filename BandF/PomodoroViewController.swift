@@ -10,6 +10,14 @@ import AVFoundation
 
 class PomodoroViewController: UIViewController {
     
+    @IBOutlet weak var boutonReset: UIButton!
+    @IBOutlet weak var boutonPause: UIButton!
+    @IBOutlet weak var boutonTaff: UIButton!
+    @IBOutlet weak var essayer: UILabel!
+    @IBOutlet weak var pomodoro: UILabel!
+    @IBOutlet weak var titre: UILabel!
+    @IBOutlet weak var header: UIView!
+    @IBOutlet var backgound: UIView!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoSlider: UISlider!
     
@@ -23,6 +31,40 @@ class PomodoroViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if AppDelegate.getMode() == 1 {
+            header.backgroundColor = .systemBlue
+            backgound.backgroundColor = .darkGray
+            pomodoro.textColor = .white
+            essayer.textColor = .white
+            labPause.textColor = .white
+            labTravail.textColor = .white
+        }
+        else {
+            header.backgroundColor = UIColor(red: 132/255, green: 251/255, blue: 255/255, alpha: 255)
+            backgound.backgroundColor = .white
+            pomodoro.textColor = .darkText
+            essayer.textColor = .darkText
+            labPause.textColor = .darkText
+            labTravail.textColor = .darkText
+        }
+        if AppDelegate.getLangue() == 0 {
+            titre.text = "Pomodoro"
+            pomodoro.text = "Le Pomodoro est une méthode qui consiste à faire des sessions de 25 minutes de travail pour 5 minutes de pause, autant de fois que possible afin de terminer ses tâches"
+            essayer.text = "Vous pouvez l'essayer grâce aux minuteurs ci-dessous :"
+            boutonTaff.titleLabel?.text = "Démarrer le Travail"
+            boutonPause.titleLabel?.text = "Démarrer la Pause"
+            boutonReset.titleLabel?.text = "Réinitialiser"
+        }else{
+            titre.text = "Pomodoro"
+            pomodoro.text = "Pomodoro is a method that consists of making sessions of 25 minutes of work for 5 minutes of break, as many times as possible in order to complete your tasks"
+            essayer.text = "You can try it by using the timers below :"
+            boutonTaff.titleLabel?.text = "Start Work"
+            boutonPause.titleLabel?.text = "Start Break"
+            boutonReset.titleLabel?.text = "Reset"
+        }
+    }
     
     @IBAction func ChangementSurSlider(_ sender: UISlider) {
         let seconds = Double(sender.value)

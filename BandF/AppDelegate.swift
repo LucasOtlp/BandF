@@ -27,15 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     public static func setTailleText(_ t : Int) {
-        tailleText = t
+        AppDelegate.tailleText = t
     }
     
     public static func setLangue(_ l : Int) {
-        langue = l
+        AppDelegate.langue = l
     }
     
     public static func setMode(_ m : Int) {
-        mode = m
+        AppDelegate.mode = m
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

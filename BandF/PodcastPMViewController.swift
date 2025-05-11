@@ -10,6 +10,9 @@ import AVFoundation
 
 class PodcastPMViewController: UIViewController {
 
+    @IBOutlet weak var titre: UILabel!
+    @IBOutlet var background: UIView!
+    @IBOutlet weak var header: UIView!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoSlider: UISlider!
     
@@ -22,6 +25,23 @@ class PodcastPMViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if AppDelegate.getMode() == 1 {
+            header.backgroundColor = .systemBlue
+            background.backgroundColor = .darkGray
+        }
+        else {
+            header.backgroundColor = UIColor(red: 132/255, green: 251/255, blue: 255/255, alpha: 255)
+            background.backgroundColor = .white
+        }
+        if AppDelegate.getLangue() == 0 {
+            titre.text = "Palais Mental"
+        }else{
+            titre.text = "Mental Palace"
+            
+        }
+    }
     
     @IBAction func ChangementSurSlider(_ sender: UISlider) {
         let seconds = Double(sender.value)

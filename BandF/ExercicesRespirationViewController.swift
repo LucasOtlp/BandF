@@ -10,6 +10,10 @@ import UIKit
 class ExercicesRespirationViewController: UIViewController {
 
     
+    @IBOutlet weak var expliText: UILabel!
+    @IBOutlet weak var inspiText: UILabel!
+    @IBOutlet weak var StartBouton: UIButton!
+    @IBOutlet weak var titre: UILabel!
     @IBOutlet weak var CercleUIView: UIView!
     @IBOutlet weak var respirationLabel: UILabel!
     @IBOutlet weak var reglerDureeInspi: UIStepper!
@@ -41,7 +45,20 @@ class ExercicesRespirationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if AppDelegate.getLangue() == 0 {
+            titre.text = "Prêt ?"
+            StartBouton.titleLabel?.text = "Commencer"
+            inspiText.text = "durée d'inspiration"
+            expliText.text = "durée d'expiration"
+        }else{
+            titre.text = "Ready?"
+            StartBouton.titleLabel?.text = "Start"
+            inspiText.text = "Inhaling duration"
+            expliText.text = "Exhaling duration"
+        }
+    }
     @IBAction func tapSurCommencer(_ sender: Any) {
         if BoutonButton.title(for: .normal) == "Commencer" {
             BoutonButton.setTitle("Arrêter", for: .normal)

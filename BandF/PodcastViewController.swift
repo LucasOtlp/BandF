@@ -10,6 +10,8 @@ import AVFoundation
 
 class PodcastViewController: UIViewController {
 
+    @IBOutlet weak var header: UIView!
+    @IBOutlet var background: UIView!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoSlider: UISlider!
     
@@ -21,6 +23,17 @@ class PodcastViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if AppDelegate.getMode() == 1 {
+            header.backgroundColor = .systemBlue
+            background.backgroundColor = .darkGray
+        }
+        else {
+            header.backgroundColor = UIColor(red: 132/255, green: 251/255, blue: 255/255, alpha: 255)
+            background.backgroundColor = .white
+        }
+    }
     
     @IBAction func ChangementSurSlider(_ sender: UISlider) {
         let seconds = Double(sender.value)
