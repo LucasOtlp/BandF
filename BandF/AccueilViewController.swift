@@ -11,6 +11,10 @@ import AVFoundation
 class AccueilViewController: UIViewController {
 
     
+    @IBOutlet weak var textBienvenue: UILabel!
+    @IBOutlet weak var titre: UILabel!
+    @IBOutlet weak var header: UIView!
+    @IBOutlet var background: UIView!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoSlider: UISlider!
   
@@ -20,9 +24,30 @@ class AccueilViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showVideo()
+        
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if AppDelegate.getMode() == 1 {
+            header.backgroundColor = .systemBlue
+            background.backgroundColor = .darkGray
+            textBienvenue.textColor = .white
+        }
+        else {
+            header.backgroundColor = UIColor(red: 132/255, green: 251/255, blue: 255/255, alpha: 255)
+            background.backgroundColor = .white
+            textBienvenue.textColor = .darkText
+        }
+        if AppDelegate.getLangue() == 0 {
+            titre.text = "Accueil"
+            textBienvenue.text = "Bienvenu(e) sur l'application de gestion de stress et de temps Beath and Focus"
+        }else{
+            titre.text = "Home"
+            textBienvenue.text = "Welcome to the application of stress and time management Beath and Focus"
+        }
+    }
     
     @IBAction func ChangementSurSlider(_ sender: UISlider) {
         let seconds = Double(sender.value)

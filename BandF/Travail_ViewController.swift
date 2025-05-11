@@ -11,6 +11,17 @@ import AVFoundation
 class Travail_ViewController: UIViewController {
 
 
+    
+    @IBOutlet weak var RestBouton: UIButton!
+    @IBOutlet weak var palaisBouton: UIButton!
+    @IBOutlet weak var pomodoroBouton: UIButton!
+    @IBOutlet weak var textMethode: UILabel!
+    @IBOutlet weak var textPodcast: UILabel!
+    @IBOutlet weak var textIci: UILabel!
+    @IBOutlet weak var textBienvenue: UILabel!
+    @IBOutlet weak var titre: UILabel!
+    @IBOutlet weak var header: UIView!
+    @IBOutlet var background: UIView!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoSlider: UISlider!
     
@@ -22,6 +33,45 @@ class Travail_ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if AppDelegate.getMode() == 1 {
+            header.backgroundColor = .systemBlue
+            background.backgroundColor = .darkGray
+            textBienvenue.textColor = .white
+            textIci.textColor = .white
+            textPodcast.textColor = .white
+            textMethode.textColor = .white
+        }
+        else {
+            header.backgroundColor = UIColor(red: 132/255, green: 251/255, blue: 255/255, alpha: 255)
+            background.backgroundColor = .white
+            textBienvenue.textColor = .darkText
+            textIci.textColor = .darkText
+            textPodcast.textColor = .darkText
+            textMethode.textColor = .darkText
+        }
+        if AppDelegate.getLangue() == 0 {
+            titre.text = "Espace travail"
+            textBienvenue.text = "Bienvenue dans l'espace travail !"
+            textIci.text = "Ici, vous pouvez retrouver différentes méthodes de travail, toutes expliquées et détaillées afin que vous puissez les essayer."
+            textPodcast.text = "N'hésitez pas à écouter le podcast ci-dessous pour plus d'informations :"
+            textMethode.text = "Accédez aux différentes méthodes grâce aux boutons suivants :"
+            pomodoroBouton.titleLabel?.text = "Pomodoro"
+            palaisBouton.titleLabel?.text = "Palais Mental"
+            RestBouton.titleLabel?.text = "Restitution Active"
+        }else{
+            titre.text = "Work space"
+            textBienvenue.text = "Welcome to the work space!"
+            textIci.text = "Here you can find different methods of work, all explained and detailed so that you can try them."
+            textPodcast.text = "Don't hesitate to listen to the podcast below for more information :"
+            textMethode.text = "Access to different methods through the buttons below :"
+            pomodoroBouton.titleLabel?.text = "Pomodoro"
+            palaisBouton.titleLabel?.text = "Mind Palace"
+            RestBouton.titleLabel?.text = "Active Restoration"
+            
+        }
+    }
     
     @IBAction func ChangementSurSlider(_ sender: UISlider) {
         let seconds = Double(sender.value)

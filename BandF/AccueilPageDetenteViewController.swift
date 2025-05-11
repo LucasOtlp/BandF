@@ -11,6 +11,12 @@ import AVFoundation
 class AccueilPageDetenteViewController: UIViewController {
 
     
+    @IBOutlet weak var exoBouton: UIButton!
+    @IBOutlet weak var musiqueBouton: UIButton!
+    @IBOutlet weak var textEntrer: UILabel!
+    @IBOutlet weak var titre: UILabel!
+    @IBOutlet weak var header: UIView!
+    @IBOutlet var background: UIView!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var videoSlider: UISlider!
     
@@ -24,6 +30,30 @@ class AccueilPageDetenteViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if AppDelegate.getMode() == 1 {
+            header.backgroundColor = .systemBlue
+            background.backgroundColor = .darkGray
+            textEntrer.textColor = .white
+        }
+        else {
+            header.backgroundColor = UIColor(red: 132/255, green: 251/255, blue: 255/255, alpha: 255)
+            background.backgroundColor = .white
+            textEntrer.textColor = .darkText
+        }
+        if AppDelegate.getLangue() == 0 {
+            titre.text = "Espace détente"
+            textEntrer.text = "Vous entrez dans l'espace de détente. Ici, vous trouverez du contenu destiné à vous déstresser. Mais avant d'aller plus loin, si c'est la première fois que vous venez, prenez le temps d'écouter ce cours podcast/vidéo pour en savoir plus sur ce qui vous attend."
+            musiqueBouton.titleLabel?.text = "Accéder à des musiques pour se détendre"
+            exoBouton.titleLabel?.text = "Accéder aux exercices de relaxation"
+        }else{
+            titre.text = "Relaxation Space"
+            textEntrer.text = "You enter the relaxation space. Here you will find content designed to relax you. But before going further, if this is your first time, take the time to listen to this podcast/video to find out more about what awaits you."
+            musiqueBouton.titleLabel?.text = "Access to relaxing music"
+            exoBouton.titleLabel?.text = "Access to relaxation exercises"
+        }
+    }
     
     @IBAction func ChangementSurSlider(_ sender: UISlider) {
         let seconds = Double(sender.value)
