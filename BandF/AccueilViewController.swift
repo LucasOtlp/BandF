@@ -90,7 +90,7 @@ class AccueilViewController: UIViewController {
     
     
     func showVideo() {
-        if let path = Bundle.main.path(forResource: "fortbattlepass", ofType: "mp4") {
+        if let path = Bundle.main.path(forResource: "IntroApplication", ofType: "mov") {
             let url = URL(fileURLWithPath: path)
             player = AVPlayer(url: url)
             
