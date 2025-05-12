@@ -20,7 +20,7 @@ class RestitViewController: UIViewController {
     @IBOutlet weak var videoSlider: UISlider!
     
     var player: AVPlayer?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showVideo()
