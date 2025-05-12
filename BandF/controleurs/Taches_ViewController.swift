@@ -9,8 +9,7 @@ import UIKit
 
 class Taches_ViewController: UIViewController {
 
-    var LesTaches : [tache] = AppDelegate.getToutesLesTaches()
-    
+    var toutesLesTaches : [tache] = AppDelegate.getToutesLesTaches()
     
     @IBOutlet weak var nomTacheTF: UITextField!
     @IBOutlet weak var descriptionTacheTF: UITextField!
@@ -24,7 +23,6 @@ class Taches_ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
     @IBAction func tapSurAjouterTache(_ sender: Any) {
         if nomTacheTF.text!.isEmpty || descriptionTacheTF.text!.isEmpty {
             confirmLabel.text! = "champs incomplets"
@@ -39,7 +37,6 @@ class Taches_ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func tapSurSauvegarder(_ sender: Any) {
         LesTaches.ecritureJSON(AppDelegate.getToutesLesTaches())
     }
@@ -53,18 +50,6 @@ class Taches_ViewController: UIViewController {
     }
     
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
     
     /*
     // MARK: - Navigation
