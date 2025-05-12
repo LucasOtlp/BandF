@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private static var langue : Int = 0
     private static var mode : Int = 0
 
+    private static var toutesLesTaches : [tache] = []
+    
     public static func getTailleText() -> Int {
         return tailleText
     }
@@ -38,8 +40,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.mode = m
     }
     
+    public static func getToutesLesTaches() -> [tache] {
+        return AppDelegate.toutesLesTaches
+    }
+    
+    public static func ajouterTache(_ uneTache: tache) {
+        AppDelegate.toutesLesTaches.append(uneTache)
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        AppDelegate.toutesLesTaches = LesTaches.chargementJSON()
+        
+        let format = DateFormatter()
+        format.dateFormat = "dd-MM-yyyy"
+        let dateDuJourString = format.string(from: Date())
+        let dateDuJour = format.date(from: dateDuJourString)
+        for indice in stride(from: AppDelegate.toutesLesTaches.count - 1, through: 0, by: -1) {
+            let dateElement = format.date(from : AppDelegate.toutesLesTaches[indice].getDate())
+            
+            if dateElement! < dateDuJour! {
+                AppDelegate.toutesLesTaches.remove(at: indice)
+            }
+        }
+        
         return true
     }
 
