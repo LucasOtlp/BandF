@@ -11,6 +11,7 @@ class LesTaches_TableViewController: UITableViewController {
 
     private var toutesLesTaches: [tache] = []
     
+    @IBOutlet var background: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         toutesLesTaches = AppDelegate.getToutesLesTaches()
@@ -21,7 +22,15 @@ class LesTaches_TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if AppDelegate.getMode() == 1 {
+            background.backgroundColor = .darkGray
+        }
+        else {
+            background.backgroundColor = .white
+        }
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

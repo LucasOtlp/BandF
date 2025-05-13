@@ -464,6 +464,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="zYW-nk-kfp"/>
+                    <connections>
+                        <outlet property="background" destination="jgn-tJ-Tbf" id="8ky-Cd-D3f"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jl1-6W-PNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -38,7 +38,7 @@ class PodcastPMViewController: UIViewController {
         if AppDelegate.getLangue() == 0 {
             titre.text = "Palais Mental"
         }else{
-            titre.text = "Mental Palace"
+            titre.text = "Mind Palace"
             
         }
     }

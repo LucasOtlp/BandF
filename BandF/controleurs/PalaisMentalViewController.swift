@@ -44,7 +44,7 @@ class PalaisMentalViewController: UIViewController {
             textExemple.text = "Voici un exemple simple d'application du Palais Mental pour apprendre un oral :"
             accesBouton.titleLabel?.text = "Acceder au podcast"
         }else{
-            titre.text = "Mental Palace"
+            titre.text = "Mind Palace"
             textConsiste.text = "The Mental Palace is not very well known, despite its great effectiveness. It consists to divide what you have to learn in several parts, as many rooms as you have in your house, for example. Then you will move from room to room to learn the different parts."
             textpermet.text = "This allows, therefore, to make work its memory by associating a place to what you learn."
             textExemple.text = "Here is a simple example of application of the Mental Palace to learn an oral:"
