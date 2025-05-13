@@ -11,6 +11,14 @@ class Taches_ViewController: UIViewController {
 
     var toutesLesTaches : [tache] = AppDelegate.getToutesLesTaches()
     
+    @IBOutlet weak var accesBouton: UIButton!
+    @IBOutlet weak var delateBouton: UIButton!
+    @IBOutlet weak var saveBouton: UIButton!
+    @IBOutlet weak var ajoutBouton: UIButton!
+    @IBOutlet var background: UIView!
+    @IBOutlet weak var textDate: UILabel!
+    @IBOutlet weak var textDesc: UILabel!
+    @IBOutlet weak var textNom: UILabel!
     @IBOutlet weak var nomTacheTF: UITextField!
     @IBOutlet weak var descriptionTacheTF: UITextField!
     @IBOutlet weak var dateDP: UIDatePicker!
@@ -22,7 +30,41 @@ class Taches_ViewController: UIViewController {
         confirmLabel.text! = ""
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if AppDelegate.getMode() == 1 {
+            background.backgroundColor = .darkGray
+            textNom.textColor = .white
+            textDesc.textColor = .white
+            textDate.textColor = .white
+            confirmLabel.textColor = .white
+            
+        }
+        else {
+            background.backgroundColor = .white
+            textNom.textColor = .darkText
+            textDesc.textColor = .darkText
+            textDate.textColor = .darkText
+            confirmLabel.textColor = .darkText
+        }
+        if AppDelegate.getLangue() == 0 {
+            textNom.text = "Nom :"
+            textDesc.text = "Description :"
+            textDate.text = "Date :"
+            ajoutBouton.titleLabel?.text = "ajouter la tâche"
+            saveBouton.titleLabel?.text = "sauvegarder et quitter"
+            delateBouton.titleLabel?.text = "effacer"
+            accesBouton.titleLabel?.text = "acceder aux tâches"
+        }else{
+            textNom.text = "Name :"
+            textDesc.text = "Description :"
+            textDate.text = "Date :"
+            ajoutBouton.titleLabel?.text = "add task"
+            saveBouton.titleLabel?.text = "save and exit"
+            delateBouton.titleLabel?.text = "delete"
+            accesBouton.titleLabel?.text = "access tasks"
+        }
+    }
     @IBAction func tapSurAjouterTache(_ sender: Any) {
         if nomTacheTF.text!.isEmpty || descriptionTacheTF.text!.isEmpty {
             confirmLabel.text! = "champs incomplets"
